@@ -1,0 +1,14 @@
+parameters:
+   message: ""
+stages:
+   - stage: output_message_stage
+     displayName: "Output Message Stage"
+     jobs:
+        - job: output_message_job
+          displayName: "Output Message Job"
+          pool:
+             vmImage: "ubuntu-latest"
+          steps:
+             - template: "task-output-message.yml"
+               parameters:
+                  message: ${{ parameters.message }}
