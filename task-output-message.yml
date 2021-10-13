@@ -1,11 +1,6 @@
 parameters:
    message: ""
-resources:
-  repositories:
-    - repository: Templates
-      type: git
-      name: YourProject/Pipeline-Templates
 steps:
-   - powershell: |
-      $message = 
+   - script: |
+      echo "${{ parameters.message }}"
      displayName: "Example: Output a Message"
