@@ -1,5 +1,6 @@
 parameters:
-   message: ""
+   - name: "message"
+     type: string
 stages:
    - stage: output_message_stage
      displayName: "Output Message Stage"
