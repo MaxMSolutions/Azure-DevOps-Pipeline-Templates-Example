@@ -1,7 +1,8 @@
 name: CI-Output-Message-$(Date:yyyyMMdd-HHmmss)
 trigger:
   - master
+  - main
 extends:
-  - template: stage-output-message.yml
-    parameters:
-      message: "Hello World"
+  template: stage-output-message.yml
+  parameters:
+    message: "Hello World"
